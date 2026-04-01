@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goddess Lakshmi Prayer Guide | Gaysorn Bangkok</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Prompt', sans-serif;
+            background-color: #fff5f7;
+        }
+        .serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #d4af37 0%, #fcf6ba 50%, #d4af37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .lotus-bg {
+            background-color: #ff69b4;
+            background-image: radial-gradient(#ffffff 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.05;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1;
+        }
+        .card-shadow {
+            box-shadow: 0 10px 25px -5px rgba(255, 105, 180, 0.2);
+        }
+        .mantra-btn:active {
+            transform: scale(0.95);
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body class="pb-12">
+    <div class="lotus-bg"></div>
+
+    <!-- Header Section -->
+    <header class="relative h-64 flex items-center justify-center overflow-hidden bg-pink-600">
+        <div class="absolute inset-0 opacity-40">
+            <svg viewBox="0 0 100 100" class="w-full h-full fill-white">
+                <path d="M50 10 C55 30 75 35 90 50 C75 65 55 70 50 90 C45 70 25 65 10 50 C25 35 45 30 50 10" />
+            </svg>
+        </div>
+        <div class="relative text-center px-4">
+            <h1 class="serif text-4xl text-white mb-2">Goddess Lakshmi</h1>
+            <p class="text-pink-100 font-light tracking-widest uppercase text-sm">Gaysorn Village • Bangkok</p>
+        </div>
+    </header>
+
+    <!-- Language Toggle -->
+    <div class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-pink-100 p-3 flex justify-center gap-4">
+        <button id="btn-en" onclick="setLang('en')" class="px-6 py-1 rounded-full font-semibold transition-all bg-pink-600 text-white shadow-lg">English</button>
+        <button id="btn-th" onclick="setLang('th')" class="px-6 py-1 rounded-full font-semibold transition-all bg-white text-pink-600 border border-pink-200">ภาษาไทย</button>
+    </div>
+
+    <main class="max-w-md mx-auto px-6 mt-8">
+        
+        <!-- Welcome Section -->
+        <section class="bg-white rounded-3xl p-8 card-shadow mb-8 border border-pink-50">
+            <div id="welcome-en">
+                <h2 class="serif text-2xl text-pink-700 mb-4">Om Shreem Mahalakshmiyei Namaha</h2>
+                <p class="text-gray-600 leading-relaxed">Welcome to one of Bangkok's most sacred spots for wealth, love, and beauty. Goddess Lakshmi is the deity of abundance.</p>
+            </div>
+            <div id="welcome-th" class="hidden">
+                <h2 class="text-2xl text-pink-700 mb-4 font-semibold">พระแม่ลักษมี (เกษรวิลเลจ)</h2>
+                <p class="text-gray-600 leading-relaxed">ยินดีต้อนรับสู่สถานที่ศักดิ์สิทธิ์ใจกลางกรุงเทพฯ พระแม่ลักษมีคือเทวีแห่งความมั่งคั่ง ร่ำรวย และความรักที่บริสุทธิ์</p>
+            </div>
+        </section>
+
+        <!-- Offering List -->
+        <section class="mb-8">
+            <h3 class="text-pink-800 font-bold uppercase tracking-wider mb-4 flex items-center">
+                <span class="mr-2">🌸</span> 
+                <span id="title-offering-en">The Offerings</span>
+                <span id="title-offering-th" class="hidden">ของไหว้ที่แนะนำ</span>
+            </h3>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-white p-4 rounded-2xl text-center border border-pink-100 shadow-sm">
+                    <div class="text-3xl mb-1">🪷</div>
+                    <p class="text-xs font-bold text-pink-600" id="item1-en">9 Pink Lotuses</p>
+                    <p class="text-xs font-bold text-pink-600 hidden" id="item1-th">ดอกบัวสีชมพู 9 ดอก</p>
+                </div>
+                <div class="bg-white p-4 rounded-2xl text-center border border-pink-100 shadow-sm">
+                    <div class="text-3xl mb-1">🥤</div>
+                    <p class="text-xs font-bold text-pink-600" id="item2-en">Red Soda / Water</p>
+                    <p class="text-xs font-bold text-pink-600 hidden" id="item2-th">น้ำแดง หรือ น้ำสะอาด</p>
+                </div>
+                <div class="bg-white p-4 rounded-2xl text-center border border-pink-100 shadow-sm">
+                    <div class="text-3xl mb-1">🍎</div>
+                    <p class="text-xs font-bold text-pink-600" id="item3-en">5 Pink Fruits</p>
+                    <p class="text-xs font-bold text-pink-600 hidden" id="item3-th">ผลไม้สีชมพู/แดง 5 อย่าง</p>
+                </div>
+                <div class="bg-white p-4 rounded-2xl text-center border border-pink-100 shadow-sm">
+                    <div class="text-3xl mb-1">🕯️</div>
+                    <p class="text-xs font-bold text-pink-600" id="item1-en">9 Incense Sticks</p>
+                    <p class="text-xs font-bold text-pink-600 hidden" id="item4-th">ธูป 9 ดอก</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Mantra Section -->
+        <section class="bg-pink-700 rounded-3xl p-8 text-white card-shadow mb-8 relative overflow-hidden">
+            <div class="absolute -right-4 -top-4 opacity-20 w-24 h-24">
+                <svg viewBox="0 0 100 100" fill="white"><circle cx="50" cy="50" r="40" /></svg>
+            </div>
+            
+            <div id="mantra-en" class="space-y-4">
+                <p class="text-pink-200 text-xs uppercase tracking-widest mb-2">Prayer Mantra</p>
+                <div class="serif text-lg leading-relaxed italic border-l-2 border-pink-400 pl-4">
+                    <p>Om Jaya Sri Lakshmi Mata (x3)</p>
+                    <p>Om Sri Lakshmiyai Namah (x3)</p>
+                    <p>Om Mahalakshmiyai Namo Namah</p>
+                    <p>Om Vishnu Priyayai Namo Namah</p>
+                    <p>Om Dhana Pradayai Namo Namah</p>
+                    <p>Om Vishwa Jananyai Namo Namah</p>
+                    <p>Ya Devi Sarva Bhuteshu</p>
+                    <p>Lakshmi Rupena Samsthita</p>
+                    <p>Namas Tasyai / Namas Tasyai / Namas Tasyai</p>
+                    <p>Namo Namah</p>
+                </div>
+            </div>
+            <div id="mantra-th" class="hidden space-y-4">
+                <p class="text-pink-200 text-xs uppercase tracking-widest mb-2">คาถาบูชา-บทสวดพระแม่ลักษมี</p>
+                <div class="text-lg leading-relaxed font-semibold border-l-2 border-pink-400 pl-4">
+                    <p>โอม ชยะ ศรี ลักษมี มาตา (3 จบ)</p>
+                    <p>โอม ศรี ลักษะมิไย นะมะห์ (3 จบ)</p>
+                    <p>โอม มหาลักษะ มิไย นะโม นะมะห์</p>
+                    <p>โอม วิษณุ ปรียาไย นะโม นะมะห์</p>
+                    <p>โอม ธะนะ ประทาไย นะโม นะมะห์</p>
+                    <p>โอม วิศวา จะนันไย นะโม นะมะห์</p>
+                    <p>ยา เทวี สะระวะ ภูเตชุ</p>
+                    <p>ลักษมี รูเปนะ สัม สะถิตา</p>
+                    <p>นะมัส ตัสไย / นะมัส ตัสไย / นะมัส ตัสไย</p>
+                    <p>นะโม นะมะห์</p>
+                </div>
+            </div>
+
+            <!-- Mantra Counter -->
+            <div class="flex items-center justify-between bg-pink-800/50 rounded-2xl p-4 mt-6">
+                <div class="text-sm font-bold" id="counter-label-en">Chant Count: <span id="counter" class="text-2xl ml-1">0</span></div>
+                <div class="text-sm font-bold hidden" id="counter-label-th">สวดไปแล้ว: <span id="counter-th" class="text-2xl ml-1">0</span></div>
+                <div class="flex gap-2">
+                    <button onclick="countMantra()" class="mantra-btn bg-white text-pink-700 px-4 py-2 rounded-xl font-bold shadow-md transition-transform">
+                        <span id="btn-pray-en">Tap to Pray</span>
+                        <span id="btn-pray-th" class="hidden">กดเพื่อเริ่มสวด</span>
+                    </button>
+                    <button onclick="resetCounter()" class="p-2 opacity-50 hover:opacity-100 transition-opacity">↺</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Etiquette -->
+        <section class="bg-white rounded-3xl p-6 border border-pink-100">
+            <h3 id="etiquette-title-en" class="text-pink-800 font-bold mb-3">Shrine Etiquette</h3>
+            <h3 id="etiquette-title-th" class="text-pink-800 font-bold mb-3 hidden">ข้อแนะนำในการสักการะ</h3>
+            
+            <ul id="rules-en" class="space-y-3 text-sm text-gray-600">
+                <li class="flex items-start"><span class="mr-2">👗</span> Dress modestly; cover shoulders and knees.</li>
+                <li class="flex items-start"><span class="mr-2">🔇</span> Maintain a quiet and respectful demeanor.</li>
+                <li class="flex items-start"><span class="mr-2">🚫</span> No meat or alcohol offerings are allowed.</li>
+            </ul>
+            <ul id="rules-th" class="space-y-3 text-sm text-gray-600 hidden">
+                <li class="flex items-start"><span class="mr-2">👗</span> แต่งกายสุภาพเรียบร้อย (ปิดไหล่และเข่า)</li>
+                <li class="flex items-start"><span class="mr-2">🔇</span> งดใช้เสียงดังขณะอธิษฐาน</li>
+                <li class="flex items-start"><span class="mr-2">🚫</span> ห้ามถวายเนื้อสัตว์และของมึนเมาทุกชนิด</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer class="text-center mt-8 px-6">
+        <p class="text-pink-400 text-xs mb-2">Designed for Gaysorn Village Visitors</p>
+        <p class="text-gray-400 text-[10px]">&copy; 2024 Bangkok Sacred Guide</p>
+    </footer>
+
+    <script>
+        let count = 0;
+        
+        function setLang(lang) {
+            const isEn = lang === 'en';
+            
+            // Toggle Buttons Style
+            document.getElementById('btn-en').className = isEn 
+                ? 'px-6 py-1 rounded-full font-semibold transition-all bg-pink-600 text-white shadow-lg' 
+                : 'px-6 py-1 rounded-full font-semibold transition-all bg-white text-pink-600 border border-pink-200';
+            
+            document.getElementById('btn-th').className = !isEn 
+                ? 'px-6 py-1 rounded-full font-semibold transition-all bg-pink-600 text-white shadow-lg' 
+                : 'px-6 py-1 rounded-full font-semibold transition-all bg-white text-pink-600 border border-pink-200';
+
+            // Elements to toggle
+            const enElements = [
+                'welcome-en', 'title-offering-en', 'item1-en', 'item2-en', 'item3-en', 'item1-en', 
+                'mantra-en', 'etiquette-title-en', 'rules-en', 'counter-label-en', 'btn-pray-en'
+            ];
+            const thElements = [
+                'welcome-th', 'title-offering-th', 'item1-th', 'item2-th', 'item3-th', 'item4-th', 
+                'mantra-th', 'etiquette-title-th', 'rules-th', 'counter-label-th', 'btn-pray-th'
+            ];
+
+            enElements.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.classList.toggle('hidden', !isEn);
+            });
+            thElements.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.classList.toggle('hidden', isEn);
+            });
+        }
+
+        function countMantra() {
+            count++;
+            document.getElementById('counter').innerText = count;
+            document.getElementById('counter-th').innerText = count;
+            
+            // Vibration feedback if supported
+            if (navigator.vibrate) {
+                navigator.vibrate(50);
+            }
+        }
+
+        function resetCounter() {
+            count = 0;
+            document.getElementById('counter').innerText = count;
+            document.getElementById('counter-th').innerText = count;
+        }
+    </script>
+</body>
+</html>
