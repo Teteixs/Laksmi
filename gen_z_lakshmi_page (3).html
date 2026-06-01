@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Goddess Lakshmi Ritual Guide | DIVAROSE.BKK</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --sand: #f4efe5;
+      --ivory: #fbf7ef;
+      --stone: #d9d0c2;
+      --clay: #b89775;
+      --bronze: #9a744f;
+      --deep: #2b2620;
+      --muted: #756b60;
+      --lotus: #c89a9b;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: 'Prompt', sans-serif;
+      color: var(--deep);
+      background:
+        radial-gradient(circle at 12% 6%, rgba(184, 151, 117, 0.18), transparent 26%),
+        radial-gradient(circle at 88% 14%, rgba(200, 154, 155, 0.14), transparent 25%),
+        linear-gradient(180deg, #f4efe5 0%, #fbf7ef 46%, #eee6da 100%);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .serif { font-family: 'Cormorant Garamond', serif; }
+
+    .panel {
+      background: rgba(251, 247, 239, 0.82);
+      border: 1px solid rgba(154, 116, 79, 0.16);
+      box-shadow: 0 28px 70px rgba(62, 48, 35, 0.08);
+      backdrop-filter: blur(18px);
+    }
+
+    .quiet-card {
+      background: rgba(255, 253, 248, 0.72);
+      border: 1px solid rgba(154, 116, 79, 0.13);
+      box-shadow: 0 18px 42px rgba(62, 48, 35, 0.055);
+    }
+
+    .dark-card {
+      background:
+        radial-gradient(circle at top right, rgba(184, 151, 117, 0.18), transparent 34%),
+        linear-gradient(135deg, #2b2620 0%, #3a3128 100%);
+      box-shadow: 0 28px 70px rgba(43, 38, 32, 0.2);
+    }
+
+    .bronze-text {
+      color: var(--bronze);
+    }
+
+    .divider {
+      width: 54px;
+      height: 1px;
+      background: rgba(154, 116, 79, 0.45);
+    }
+
+    .ambient {
+      position: fixed;
+      width: 260px;
+      height: 260px;
+      border-radius: 999px;
+      filter: blur(18px);
+      opacity: 0.12;
+      z-index: -1;
+      animation: float 10s ease-in-out infinite;
+    }
+
+    .ambient.one { background: #b89775; left: -110px; top: 120px; }
+    .ambient.two { background: #c89a9b; right: -120px; top: 410px; animation-delay: 2s; }
+    .ambient.three { background: #d9d0c2; left: 25%; bottom: -140px; animation-delay: 3.2s; }
+
+    .lotus-mark {
+      position: fixed;
+      width: 170px;
+      height: 170px;
+      border: 1px solid rgba(154, 116, 79, 0.12);
+      border-radius: 999px;
+      right: -60px;
+      top: 120px;
+      z-index: -1;
+    }
+
+    .lotus-mark::before,
+    .lotus-mark::after {
+      content: '';
+      position: absolute;
+      inset: 34px;
+      border: 1px solid rgba(154, 116, 79, 0.10);
+      border-radius: 999px 999px 999px 0;
+      transform: rotate(45deg);
+    }
+
+    .lotus-mark::after {
+      transform: rotate(135deg);
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-14px); }
+    }
+
+    .chip-active {
+      background: var(--deep);
+      color: var(--ivory);
+      box-shadow: 0 10px 24px rgba(43, 38, 32, 0.14);
+    }
+
+    .chip-inactive {
+      background: rgba(251, 247, 239, 0.66);
+      color: var(--muted);
+      border: 1px solid rgba(154, 116, 79, 0.18);
+    }
+
+    .tap-btn:active { transform: scale(0.97); }
+    .hidden { display: none; }
+  </style>
+</head>
+
+<body>
+  <div class="ambient one"></div>
+  <div class="ambient two"></div>
+  <div class="ambient three"></div>
+  <div class="lotus-mark"></div>
+
+  <nav class="sticky top-0 z-50 px-5 py-4 bg-[#f4efe5]/80 backdrop-blur-xl border-b border-[#9a744f]/10">
+    <div class="max-w-md mx-auto flex items-center justify-between">
+      <div>
+        <p class="text-[10px] uppercase tracking-[0.34em] text-[#9a744f] font-semibold">@DIVAROSE.BKK</p>
+        <p class="text-xs tracking-[0.12em] uppercase text-[#756b60] mt-1">Lakshmi Ritual Guide</p>
+      </div>
+      <div class="flex gap-2">
+        <button id="btn-en" onclick="setLang('en')" class="chip-active px-4 py-2 rounded-full text-xs font-semibold transition-all">EN</button>
+        <button id="btn-th" onclick="setLang('th')" class="chip-inactive px-4 py-2 rounded-full text-xs font-semibold transition-all">TH</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-md mx-auto px-5 pb-14">
+    <section class="pt-10 pb-6">
+      <div class="panel rounded-[2rem] p-8 overflow-hidden relative min-h-[455px]">
+        <div class="absolute right-8 top-8 text-[10px] tracking-[0.28em] uppercase text-[#9a744f]/70">Ritual 01</div>
+        <div class="absolute -right-20 -bottom-20 w-56 h-56 rounded-full border border-[#9a744f]/10"></div>
+        <div class="absolute -right-10 -bottom-10 w-36 h-36 rounded-full border border-[#9a744f]/10"></div>
+
+        <div class="relative z-10 pt-10">
+          <p class="text-[10px] uppercase tracking-[0.34em] text-[#9a744f] font-semibold mb-6">By @DIVAROSE.BKK</p>
+
+          <h1 class="serif text-[4.8rem] leading-[0.82] font-semibold mb-6 tracking-[-0.04em]">
+            Goddess<br><span class="bronze-text">Lakshmi</span>
+          </h1>
+
+          <div class="divider mb-6"></div>
+
+          <p id="hero-kicker-en" class="text-[10px] uppercase tracking-[0.28em] text-[#756b60] font-medium mb-4">Faith · Gratitude · Abundance</p>
+          <p id="hero-kicker-th" class="hidden text-[10px] uppercase tracking-[0.2em] text-[#756b60] font-medium mb-4">ศรัทธา · ขอบคุณ · ความอุดมสมบูรณ์</p>
+
+          <p id="hero-en" class="text-[14px] leading-7 text-[#756b60] max-w-[300px]">
+            A quiet, modern guide inspired by traditional Lakshmi worship for prosperity, abundance, beauty, good fortune, and auspicious blessings.
+          </p>
+          <p id="hero-th" class="hidden text-[14px] leading-7 text-[#756b60] max-w-[300px]">
+            คู่มือสักการะพระแม่ลักษมีแบบสงบและร่วมสมัย โดยได้รับแรงบันดาลใจจากธรรมเนียมดั้งเดิม เพื่อความมั่งคั่ง ความอุดมสมบูรณ์ ความงดงาม โชคลาภ และสิริมงคล
+          </p>
+
+          <div class="mt-8 flex gap-2 flex-wrap">
+            <span id="tag1-en" class="px-4 py-2 rounded-full bg-[#efe4d4] text-[#8c6744] text-[11px] font-medium">Prosperity</span>
+            <span id="tag1-th" class="hidden px-4 py-2 rounded-full bg-[#efe4d4] text-[#8c6744] text-[11px] font-medium">มั่งคั่ง</span>
+            <span id="tag2-en" class="px-4 py-2 rounded-full bg-[#f2e8df] text-[#8c6744] text-[11px] font-medium">Good fortune</span>
+            <span id="tag2-th" class="hidden px-4 py-2 rounded-full bg-[#f2e8df] text-[#8c6744] text-[11px] font-medium">โชคลาภ</span>
+            <span id="tag3-en" class="px-4 py-2 rounded-full bg-[#f0dedf] text-[#8c6744] text-[11px] font-medium">Auspiciousness</span>
+            <span id="tag3-th" class="hidden px-4 py-2 rounded-full bg-[#f0dedf] text-[#8c6744] text-[11px] font-medium">สิริมงคล</span>
+          </div>
+        </div>
+
+        <div class="absolute right-8 bottom-8 text-4xl opacity-70">🪷</div>
+      </div>
+    </section>
+
+    <section class="mb-5">
+      <div class="quiet-card rounded-[1.75rem] p-6">
+        <p class="text-[10px] uppercase tracking-[0.28em] text-[#9a744f] font-semibold mb-4">Before you start</p>
+        <h2 id="intro-title-en" class="serif text-4xl leading-none mb-5 font-semibold">Pray with respect.</h2>
+        <h2 id="intro-title-th" class="hidden serif text-4xl leading-none mb-5 font-semibold">สักการะด้วยความเคารพ</h2>
+
+        <p id="intro-en" class="text-sm leading-7 text-[#756b60]">
+          Goddess Lakshmi is revered in Hindu tradition as the goddess of prosperity, abundance, beauty, fortune, and auspicious well-being. In Thailand, many devotees also pray for harmony in love and relationships.
+        </p>
+        <p id="intro-th" class="hidden text-sm leading-7 text-[#756b60]">
+          พระแม่ลักษมีเป็นเทวีที่ได้รับการเคารพในคติฮินดูในฐานะเทวีแห่งความมั่งคั่ง ความอุดมสมบูรณ์ ความงดงาม โชคลาภ และสิริมงคล โดยในไทยผู้ศรัทธาหลายคนยังนิยมขอพรด้านความรักและความสัมพันธ์ที่ดีด้วย
+        </p>
+      </div>
+    </section>
+
+    <section class="mb-5">
+      <div class="quiet-card rounded-[1.75rem] p-6">
+        <p class="text-[10px] uppercase tracking-[0.28em] text-[#9a744f] font-semibold mb-4">Auspicious timing</p>
+        <h2 id="timing-title-en" class="serif text-3xl leading-tight mb-5 font-semibold">Friday is commonly preferred.</h2>
+        <h2 id="timing-title-th" class="hidden serif text-3xl leading-tight mb-5 font-semibold">วันศุกร์เป็นวันที่นิยมสักการะ</h2>
+
+        <p id="timing-en" class="text-sm leading-7 text-[#756b60]">
+          Fridays are widely considered auspicious for worshipping Goddess Lakshmi. You may still pray on other days with sincerity and a clean intention.
+        </p>
+        <p id="timing-th" class="hidden text-sm leading-7 text-[#756b60]">
+          วันศุกร์มักถือเป็นวันที่เป็นมงคลสำหรับการสักการะพระแม่ลักษมี อย่างไรก็ตาม สามารถสักการะในวันอื่นได้เช่นกัน หากตั้งใจด้วยความสุภาพและศรัทธา
+        </p>
+      </div>
+    </section>
+
+    <section class="mb-6">
+      <div class="mb-4">
+        <p class="text-[10px] uppercase tracking-[0.28em] text-[#9a744f] font-semibold">Step 01</p>
+        <div class="flex items-end justify-between mt-2">
+          <h2 id="offering-title-en" class="serif text-4xl leading-none font-semibold">Common offerings</h2>
+          <h2 id="offering-title-th" class="hidden serif text-4xl leading-none font-semibold">ของไหว้ที่นิยมใช้</h2>
+          <p id="save-en" class="text-[11px] text-[#9a744f]">save</p>
+          <p id="save-th" class="hidden text-[11px] text-[#9a744f]">บันทึก</p>
+        </div>
+      </div>
+
+      <div class="space-y-3">
+        <div class="quiet-card rounded-[1.5rem] p-5 flex gap-4 items-start">
+          <div class="text-2xl">🪷</div>
+          <div>
+            <p id="item1-en" class="font-medium text-sm">Pink lotus flowers</p>
+            <p id="item1-th" class="hidden font-medium text-sm">ดอกบัวสีชมพู</p>
+            <p id="item1-note-en" class="text-xs leading-5 text-[#756b60] mt-1">Often offered for grace and purity.</p>
+            <p id="item1-note-th" class="hidden text-xs leading-5 text-[#756b60] mt-1">สื่อถึงความงดงามและความบริสุทธิ์</p>
+          </div>
+        </div>
+
+        <div class="quiet-card rounded-[1.5rem] p-5 flex gap-4 items-start">
+          <div class="text-2xl">🥥</div>
+          <div>
+            <p id="item2-en" class="font-medium text-sm">Coconut or water</p>
+            <p id="item2-th" class="hidden font-medium text-sm">มะพร้าวหรือน้ำสะอาด</p>
+            <p id="item2-note-en" class="text-xs leading-5 text-[#756b60] mt-1">Clean, simple, and respectful.</p>
+            <p id="item2-note-th" class="hidden text-xs leading-5 text-[#756b60] mt-1">สะอาด เรียบง่าย และเหมาะสม</p>
+          </div>
+        </div>
+
+        <div class="quiet-card rounded-[1.5rem] p-5 flex gap-4 items-start">
+          <div class="text-2xl">🍎</div>
+          <div>
+            <p id="item3-en" class="font-medium text-sm">Fresh fruits</p>
+            <p id="item3-th" class="hidden font-medium text-sm">ผลไม้สด</p>
+            <p id="item3-note-en" class="text-xs leading-5 text-[#756b60] mt-1">Choose fresh, clean offerings.</p>
+            <p id="item3-note-th" class="hidden text-xs leading-5 text-[#756b60] mt-1">เลือกของสด สะอาด และตั้งใจถวาย</p>
+          </div>
+        </div>
+
+        <div class="quiet-card rounded-[1.5rem] p-5 flex gap-4 items-start">
+          <div class="text-2xl">🍬</div>
+          <div>
+            <p id="item4-en" class="font-medium text-sm">Sweets</p>
+            <p id="item4-th" class="hidden font-medium text-sm">ขนมหรือของหวาน</p>
+            <p id="item4-note-en" class="text-xs leading-5 text-[#756b60] mt-1">Traditional sweet offerings are commonly used.</p>
+            <p id="item4-note-th" class="hidden text-xs leading-5 text-[#756b60] mt-1">นิยมใช้เป็นของถวายในพิธีบูชา</p>
+          </div>
+        </div>
+
+        <div class="quiet-card rounded-[1.5rem] p-5 flex gap-4 items-start">
+          <div class="text-2xl">🕯️</div>
+          <div>
+            <p id="item5-en" class="font-medium text-sm">Incense and candle</p>
+            <p id="item5-th" class="hidden font-medium text-sm">ธูปและเทียน</p>
+            <p id="item5-note-en" class="text-xs leading-5 text-[#756b60] mt-1">Use according to the shrine’s local guidance. If unsure, follow posted instructions at the worship area.</p>
+            <p id="item5-note-th" class="hidden text-xs leading-5 text-[#756b60] mt-1">ใช้ตามข้อแนะนำของสถานที่สักการะ หากไม่แน่ใจให้ดูป้ายแนะนำ ณ จุดบูชา</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark-card rounded-[2rem] p-7 mb-6 text-[#fbf7ef] relative overflow-hidden">
+      <div class="absolute -right-16 -top-16 w-44 h-44 rounded-full border border-[#b89775]/20"></div>
+      <div class="absolute left-7 bottom-6 text-7xl opacity-10 serif">ॐ</div>
+
+      <div class="relative z-10">
+        <p class="text-[10px] uppercase tracking-[0.28em] text-[#b89775] font-semibold mb-4">Step 02 · Mantra</p>
+        <h2 id="mantra-title-en" class="serif text-4xl leading-none mb-6 font-semibold">Short & full prayer</h2>
+        <h2 id="mantra-title-th" class="hidden serif text-4xl leading-none mb-6 font-semibold">คาถาสั้นและบทสวดเต็ม</h2>
+
+        <div class="rounded-[1.5rem] bg-[#fbf7ef]/8 border border-[#fbf7ef]/10 p-5 mb-5 backdrop-blur-md">
+          <p class="text-[10px] uppercase tracking-[0.28em] text-[#b89775] font-semibold mb-3">Core Mantra</p>
+          <p class="serif text-4xl leading-tight text-[#d8c0a4] mb-4">ॐ श्रीं महालक्ष्म्यै नमः</p>
+
+          <div id="short-mantra-en" class="text-sm leading-7 border-l border-[#b89775] pl-4 text-[#efe4d4]">
+            <p class="font-medium">Om Shreem Mahalakshmyai Namah</p>
+            <p class="text-[#c9b49d] mt-2">Meaning: I bow to Goddess Mahalakshmi, the embodiment of prosperity, abundance, beauty, and auspicious blessings.</p>
+            <p class="text-[#c9b49d] mt-2">Suggested repetitions: 9 · 27 · 54 · 108 times</p>
+          </div>
+
+          <div id="short-mantra-th" class="hidden text-sm leading-7 border-l border-[#b89775] pl-4 text-[#efe4d4]">
+            <p class="font-medium">โอม ศรีม มหาลักษมะไย นะมะห์</p>
+            <p class="text-[#c9b49d] mt-2">ความหมายโดยสรุป: ขอนอบน้อมต่อพระแม่มหาลักษมี ผู้เป็นสัญลักษณ์แห่งความมั่งคั่ง ความอุดมสมบูรณ์ ความงดงาม และสิริมงคล</p>
+            <p class="text-[#c9b49d] mt-2">จำนวนครั้งที่นิยม: 9 · 27 · 54 · 108 จบ</p>
+          </div>
+        </div>
+
+        <div class="my-6 h-px bg-[#b89775]/25"></div>
+
+        <div id="full-prayer-en" class="rounded-[1.5rem] bg-[#fbf7ef]/6 border border-[#fbf7ef]/10 p-5 backdrop-blur-md">
+          <p class="text-[10px] uppercase tracking-[0.28em] text-[#b89775] font-semibold mb-4">Full Prayer · Transliteration</p>
+          <div class="text-sm leading-8 text-[#efe4d4] space-y-3">
+            <div>
+              <p>Om Jaya Sri Lakshmi Mata (3x)</p>
+              <p>Om Sri Lakshmiyai Namah (3x)</p>
+            </div>
+            <div>
+              <p>Om Mahalakshmiyai Namo Namah</p>
+              <p>Om Vishnu Priyayai Namo Namah</p>
+              <p>Om Dhana Pradayai Namo Namah</p>
+              <p>Om Vishwa Jananyai Namo Namah</p>
+            </div>
+            <div>
+              <p>Ya Devi Sarva Bhuteshu</p>
+              <p>Lakshmi Rupena Samsthita</p>
+            </div>
+            <div>
+              <p>Namastasyai Namastasyai</p>
+              <p>Namastasyai Namo Namah</p>
+            </div>
+            <div>
+              <p>Om Shreem Mahalakshmyai Namah</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="full-prayer-th" class="hidden rounded-[1.5rem] bg-[#fbf7ef]/6 border border-[#fbf7ef]/10 p-5 backdrop-blur-md">
+          <p class="text-[10px] uppercase tracking-[0.2em] text-[#b89775] font-semibold mb-4">บทสวดเต็ม · คำอ่านไทย</p>
+          <div class="text-sm leading-8 text-[#efe4d4] space-y-3">
+            <div>
+              <p>โอม ชยะ ศรี ลักษมี มาตา (3 จบ)</p>
+              <p>โอม ศรี ลักษะมิไย นะมะห์ (3 จบ)</p>
+            </div>
+            <div>
+              <p>โอม มหาลักษะมิไย นะโม นะมะห์</p>
+              <p>โอม วิษณุ ปรียาไย นะโม นะมะห์</p>
+              <p>โอม ธะนะ ประทาไย นะโม นะมะห์</p>
+              <p>โอม วิศวา จะนันไย นะโม นะมะห์</p>
+            </div>
+            <div>
+              <p>ยา เทวี สะระวะ ภูเตชุ</p>
+              <p>ลักษมี รูเปนะ สัมสถิตา</p>
+            </div>
+            <div>
+              <p>นะมัส ตัสไย นะมัส ตัสไย</p>
+              <p>นะมัส ตัสไย นะโม นะมะห์</p>
+            </div>
+            <div>
+              <p>โอม ศรีม มหาลักษมะไย นะมะห์</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-7 bg-[#fbf7ef]/8 rounded-[1.5rem] p-4 flex items-center justify-between backdrop-blur-md border border-[#fbf7ef]/10">
+          <div>
+            <p id="counter-label-en" class="text-xs text-[#c9b49d]">Chant count</p>
+            <p id="counter-label-th" class="hidden text-xs text-[#c9b49d]">จำนวนครั้งที่สวด</p>
+            <p class="text-4xl font-medium"><span id="counter">0</span></p>
+          </div>
+          <div class="flex gap-2">
+            <button id="tap-btn" onclick="countMantra()" class="tap-btn bg-[#fbf7ef] text-[#2b2620] rounded-full px-5 py-3 text-sm font-medium transition-transform">Tap</button>
+            <button onclick="resetCounter()" class="tap-btn bg-[#fbf7ef]/10 text-[#fbf7ef] rounded-full px-4 py-3 font-medium transition-transform">↺</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quiet-card rounded-[1.75rem] p-6 mb-5">
+      <p class="text-[10px] uppercase tracking-[0.28em] text-[#9a744f] font-semibold mb-4">Step 03 · Etiquette</p>
+      <h2 id="rules-title-en" class="serif text-3xl leading-none mb-5 font-semibold">Keep it respectful</h2>
+      <h2 id="rules-title-th" class="hidden serif text-3xl leading-none mb-5 font-semibold">ข้อควรปฏิบัติ</h2>
+
+      <ul id="rules-en" class="space-y-3 text-sm leading-6 text-[#756b60]">
+        <li>Dress modestly and respectfully.</li>
+        <li>Keep your voice low and your intention clear.</li>
+        <li>Avoid meat and alcohol offerings.</li>
+        <li>Keep the worship area clean.</li>
+        <li>Avoid touching sacred objects unless permitted.</li>
+      </ul>
+
+      <ul id="rules-th" class="hidden space-y-3 text-sm leading-6 text-[#756b60]">
+        <li>แต่งกายสุภาพและให้เกียรติสถานที่</li>
+        <li>ใช้เสียงเบาและตั้งจิตให้ชัดเจน</li>
+        <li>งดถวายเนื้อสัตว์และของมึนเมา</li>
+        <li>รักษาความสะอาดบริเวณจุดสักการะ</li>
+        <li>ไม่สัมผัสวัตถุศักดิ์สิทธิ์ หากไม่ได้รับอนุญาต</li>
+      </ul>
+    </section>
+
+    <section class="rounded-[1.75rem] p-6 mb-8 bg-[#efe4d4] border border-[#9a744f]/12 relative overflow-hidden">
+      <div class="absolute -right-12 -bottom-12 w-36 h-36 rounded-full border border-[#9a744f]/15"></div>
+      <p class="text-[10px] uppercase tracking-[0.28em] font-semibold text-[#9a744f] mb-4">Final note</p>
+      <h2 id="note-title-en" class="serif text-4xl leading-none mb-5 font-semibold">Offer gratitude.</h2>
+      <h2 id="note-title-th" class="hidden serif text-4xl leading-none mb-5 font-semibold">ขอบคุณด้วยใจสงบ</h2>
+      <p id="note-en" class="text-sm leading-7 text-[#756b60]">
+        This guide is a modern, respectful introduction inspired by traditional Lakshmi worship. Local customs may vary, so follow the guidance of each shrine or worship space.
+      </p>
+      <p id="note-th" class="hidden text-sm leading-7 text-[#756b60]">
+        คู่มือนี้เป็นการแนะนำแบบร่วมสมัยที่ได้รับแรงบันดาลใจจากธรรมเนียมการสักการะพระแม่ลักษมี โดยธรรมเนียมแต่ละสถานที่อาจแตกต่างกัน จึงควรปฏิบัติตามคำแนะนำของสถานที่สักการะนั้น ๆ
+      </p>
+    </section>
+
+    <footer class="text-center pb-4">
+      <p class="text-[10px] tracking-[0.28em] uppercase text-[#9a744f] font-semibold">A Ritual Experience by @DIVAROSE.BKK</p>
+      <p class="text-[10px] text-[#756b60]/70 mt-2">© 2026 Sacred Guide</p>
+    </footer>
+  </main>
+
+  <script>
+    let count = 0;
+
+    function toggle(id, hide) {
+      const el = document.getElementById(id);
+      if (el) el.classList.toggle('hidden', hide);
+    }
+
+    function setLang(lang) {
+      const isEn = lang === 'en';
+
+      document.getElementById('btn-en').className = isEn
+        ? 'chip-active px-4 py-2 rounded-full text-xs font-semibold transition-all'
+        : 'chip-inactive px-4 py-2 rounded-full text-xs font-semibold transition-all';
+
+      document.getElementById('btn-th').className = !isEn
+        ? 'chip-active px-4 py-2 rounded-full text-xs font-semibold transition-all'
+        : 'chip-inactive px-4 py-2 rounded-full text-xs font-semibold transition-all';
+
+      const enElements = [
+        'hero-kicker-en', 'hero-en', 'tag1-en', 'tag2-en', 'tag3-en',
+        'intro-title-en', 'intro-en', 'timing-title-en', 'timing-en',
+        'offering-title-en', 'save-en',
+        'item1-en', 'item2-en', 'item3-en', 'item4-en', 'item5-en',
+        'item1-note-en', 'item2-note-en', 'item3-note-en', 'item4-note-en', 'item5-note-en',
+        'mantra-title-en', 'short-mantra-en', 'full-prayer-en', 'counter-label-en',
+        'rules-title-en', 'rules-en', 'note-title-en', 'note-en'
+      ];
+
+      const thElements = [
+        'hero-kicker-th', 'hero-th', 'tag1-th', 'tag2-th', 'tag3-th',
+        'intro-title-th', 'intro-th', 'timing-title-th', 'timing-th',
+        'offering-title-th', 'save-th',
+        'item1-th', 'item2-th', 'item3-th', 'item4-th', 'item5-th',
+        'item1-note-th', 'item2-note-th', 'item3-note-th', 'item4-note-th', 'item5-note-th',
+        'mantra-title-th', 'short-mantra-th', 'full-prayer-th', 'counter-label-th',
+        'rules-title-th', 'rules-th', 'note-title-th', 'note-th'
+      ];
+
+      enElements.forEach(id => toggle(id, !isEn));
+      thElements.forEach(id => toggle(id, isEn));
+
+      const tapBtn = document.getElementById('tap-btn');
+      tapBtn.innerText = isEn ? 'Tap' : 'แตะ';
+    }
+
+    function countMantra() {
+      count++;
+      document.getElementById('counter').innerText = count;
+      if (navigator.vibrate) navigator.vibrate(35);
+    }
+
+    function resetCounter() {
+      count = 0;
+      document.getElementById('counter').innerText = count;
+    }
+  </script>
+</body>
+</html>
